@@ -55,12 +55,12 @@ class MySaveFileThread(threading.Thread):
 
             command_line = [
                 config.PATH_TO_GCLONE,
-                'copy',
+                'sync',
                 '--drive-server-side-across-configs',
                 '-P',
                 '--stats',
                 '1s',
-                '--ignore-existing'
+                '--ignore-size'
             ]
             if config.GCLONE_PARA_OVERRIDE:
                 command_line.extend(config.GCLONE_PARA_OVERRIDE)
